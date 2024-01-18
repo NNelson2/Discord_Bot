@@ -1,4 +1,4 @@
-package me.duncte123.jdatuts.lavaplayer;
+package noah.nelson.lavaplayer;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;

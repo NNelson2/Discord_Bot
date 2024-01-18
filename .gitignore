@@ -1,0 +1,9 @@
+.idea/
+build/
+target/
+
+.vscode/
+
+out/
+.env
+database.db

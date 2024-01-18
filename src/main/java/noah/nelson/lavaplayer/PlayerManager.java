@@ -1,4 +1,4 @@
-package me.duncte123.jdatuts.lavaplayer;
+package noah.nelson.lavaplayer;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
@@ -8,7 +8,7 @@ import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import net.dv8tion.jda.api.entities.Guild;
-import net.dv8tion.jda.api.entities.TextChannel;
+import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 
 import java.util.HashMap;
 import java.util.List;
@@ -46,24 +46,24 @@ public class PlayerManager {
             public void trackLoaded(AudioTrack track) {
                 musicManager.scheduler.queue(track);
 
-                channel.sendMessage("Adding to queue: `")
-                        .append(track.getInfo().title)
-                        .append("` by `")
-                        .append(track.getInfo().author)
-                        .append('`')
-                        .queue();
+//                channel.sendMessage("Adding to queue: `")
+//                        .append(track.getInfo().title)
+//                        .append("` by `")
+//                        .append(track.getInfo().author)
+//                        .append('`')
+//                        .queue();
             }
 
             @Override
             public void playlistLoaded(AudioPlaylist playlist) {
                 final List<AudioTrack> tracks = playlist.getTracks();
 
-                channel.sendMessage("Adding to queue: `")
-                        .append(String.valueOf(tracks.size()))
-                        .append("` tracks from playlist `")
-                        .append(playlist.getName())
-                        .append('`')
-                        .queue();
+//                channel.sendMessage("Adding to queue: `")
+//                        .append(String.valueOf(tracks.size()))
+//                        .append("` tracks from playlist `")
+//                        .append(playlist.getName())
+//                        .append('`')
+//                        .queue();
 
                 for (final AudioTrack track : tracks) {
                     musicManager.scheduler.queue(track);

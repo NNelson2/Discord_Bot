@@ -17,7 +17,6 @@ public class Bot {
         DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token);
         builder.enableIntents(GatewayIntent.DIRECT_MESSAGES,GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_VOICE_STATES);
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setActivity(Activity.watching(""));
         shardManager = builder.build();
         shardManager.addEventListener(new MusicCommandListener());
     }
